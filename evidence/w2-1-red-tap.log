@@ -1,0 +1,715 @@
+TAP version 13
+# Subtest: V validation
+    # Subtest: V1 question empty string
+    not ok 1 - V1 question empty string
+      ---
+      duration_ms: 1.110958
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:152:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:154:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: V2 question whitespace only
+    not ok 2 - V2 question whitespace only
+      ---
+      duration_ms: 0.104625
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:157:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:159:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V3 reason empty string
+    not ok 3 - V3 reason empty string
+      ---
+      duration_ms: 0.100291
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:166:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:168:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V4 one option
+    not ok 4 - V4 one option
+      ---
+      duration_ms: 0.077792
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:171:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:173:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V5 four options
+    not ok 5 - V5 four options
+      ---
+      duration_ms: 0.079583
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:180:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:182:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V6 duplicate option ids
+    not ok 6 - V6 duplicate option ids
+      ---
+      duration_ms: 0.070958
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:189:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:195:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V7 option with empty id
+    not ok 7 - V7 option with empty id
+      ---
+      duration_ms: 0.072917
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:198:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:204:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V8 option with empty label
+    not ok 8 - V8 option with empty label
+      ---
+      duration_ms: 0.081542
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:207:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:213:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: V9 option with empty tradeoff
+    not ok 9 - V9 option with empty tradeoff
+      ---
+      duration_ms: 0.092584
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:216:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        The validation function is expected to return "true". Received false
+        
+        Caught error:
+        
+        Error: not implemented
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      stack: |-
+        async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+        async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:222:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..9
+not ok 1 - V validation
+  ---
+  duration_ms: 2.401042
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:151:1'
+  failureType: 'subtestsFailed'
+  error: '9 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: I interaction surface
+    # Subtest: I1 dialog surface includes question, reason, options, tradeoffs, recommendation
+    not ok 1 - I1 dialog surface includes question, reason, options, tradeoffs, recommendation
+      ---
+      duration_ms: 0.125416
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:231:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:238:11)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      ...
+    # Subtest: I2 custom-answer entry is offered and distinct from real option entries
+    not ok 2 - I2 custom-answer entry is offered and distinct from real option entries
+      ---
+      duration_ms: 0.057458
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:260:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:263:11)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: I3 without recommendation, surface contains no Recommendation section
+    not ok 3 - I3 without recommendation, surface contains no Recommendation section
+      ---
+      duration_ms: 0.040667
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:281:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:285:11)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..3
+not ok 2 - I interaction surface
+  ---
+  duration_ms: 0.315042
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:230:1'
+  failureType: 'subtestsFailed'
+  error: '3 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: A answered
+    # Subtest: A1 select returns offered[1]
+    not ok 1 - A1 select returns offered[1]
+      ---
+      duration_ms: 0.066166
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:297:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:300:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      ...
+    # Subtest: A2 select custom entry then custom input
+    not ok 2 - A2 select custom entry then custom input
+      ---
+      duration_ms: 0.046709
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:310:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:316:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: A3 custom answer preserves whitespace exactly
+    not ok 3 - A3 custom answer preserves whitespace exactly
+      ---
+      duration_ms: 0.038458
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:325:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:332:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: A4 option label with surrounding whitespace preserved exactly
+    not ok 4 - A4 option label with surrounding whitespace preserved exactly
+      ---
+      duration_ms: 0.042458
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:341:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:347:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: A5 substring-overlapping labels mapped by exact index, not substring
+    not ok 5 - A5 substring-overlapping labels mapped by exact index, not substring
+      ---
+      duration_ms: 0.037875
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:357:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:363:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..5
+not ok 3 - A answered
+  ---
+  duration_ms: 0.292958
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:296:1'
+  failureType: 'subtestsFailed'
+  error: '5 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: C cancellation
+    # Subtest: C1 select returns undefined
+    not ok 1 - C1 select returns undefined
+      ---
+      duration_ms: 0.04575
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:375:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:378:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      ...
+    # Subtest: C2 select custom entry then input undefined
+    not ok 2 - C2 select custom entry then input undefined
+      ---
+      duration_ms: 0.030875
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:387:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:393:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: C3 select custom entry then input whitespace only spaces
+    not ok 3 - C3 select custom entry then input whitespace only spaces
+      ---
+      duration_ms: 0.03025
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:397:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:403:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: C4 select custom entry then input whitespace mixed
+    not ok 4 - C4 select custom entry then input whitespace mixed
+      ---
+      duration_ms: 0.035083
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:407:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:413:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..4
+not ok 4 - C cancellation
+  ---
+  duration_ms: 0.193209
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:374:1'
+  failureType: 'subtestsFailed'
+  error: '4 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: P pending / no default
+    # Subtest: P1 stays pending while select unresolved, then returns selected answer
+    not ok 1 - P1 stays pending while select unresolved, then returns selected answer
+      ---
+      duration_ms: 0.508166
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:419:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        runAskUser should still be pending
+        + actual - expected
+        
+        + Error: not implemented
+        +     at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        +     at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:422:21)
+        +     at Test.runInAsyncScope (node:async_hooks:226:14)
+        +     at Test.run (node:internal/test_runner/test:1402:25)
+        +     at Test.start (node:internal/test_runner/test:1262:17)
+        +     at node:internal/test_runner/test:1903:71
+        +     at node:internal/per_context/primordials:505:82
+        +     at new Promise (<anonymous>)
+        +     at new SafePromise (node:internal/per_context/primordials:479:3)
+        +     at node:internal/per_context/primordials:505:9
+        - 'timer'
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 'timer'
+      actual:
+      error: 'not implemented'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:422:21)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:425:12)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: P2 with recommendation present and select unresolved, no default auto-accept
+    not ok 2 - P2 with recommendation present and select unresolved, no default auto-accept
+      ---
+      duration_ms: 0.13925
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:436:3'
+      failureType: 'testCodeFailure'
+      error: |-
+        should not auto-resolve with recommendation
+        + actual - expected
+        
+        + Error: not implemented
+        +     at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        +     at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:443:21)
+        +     at Test.runInAsyncScope (node:async_hooks:226:14)
+        +     at Test.run (node:internal/test_runner/test:1402:25)
+        +     at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        +     at Test.postRun (node:internal/test_runner/test:1542:19)
+        +     at Test.run (node:internal/test_runner/test:1467:12)
+        +     at async Promise.all (index 0)
+        +     at async Suite.run (node:internal/test_runner/test:1905:7)
+        +     at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+        - 'timer'
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 'timer'
+      actual:
+      error: 'not implemented'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:443:21)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:446:12)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..2
+not ok 5 - P pending / no default
+  ---
+  duration_ms: 0.695709
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:418:1'
+  failureType: 'subtestsFailed'
+  error: '2 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: U unavailable
+    # Subtest: U1 ui undefined returns unavailable
+    not ok 1 - U1 ui undefined returns unavailable
+      ---
+      duration_ms: 0.100333
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:459:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:461:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      ...
+    # Subtest: U2 select method missing
+    not ok 2 - U2 select method missing
+      ---
+      duration_ms: 0.034542
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:465:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:468:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    # Subtest: U3 input method missing
+    not ok 3 - U3 input method missing
+      ---
+      duration_ms: 0.044791
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:472:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:475:26)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..3
+not ok 6 - U unavailable
+  ---
+  duration_ms: 0.222166
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:458:1'
+  failureType: 'subtestsFailed'
+  error: '3 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: B busy
+    # Subtest: B1 second call on same runner while pending returns unavailable busy
+    not ok 1 - B1 second call on same runner while pending returns unavailable busy
+      ---
+      duration_ms: 9.7655
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:481:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:484:22)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      ...
+    # Subtest: B2 after first call finishes, later call on same runner is not busy
+    not ok 2 - B2 after first call finishes, later call on same runner is not busy
+      ---
+      duration_ms: 0.6055
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:517:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:520:11)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        Test.postRun (node:internal/test_runner/test:1542:19)
+        Test.run (node:internal/test_runner/test:1467:12)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:1905:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+      ...
+    1..2
+not ok 7 - B busy
+  ---
+  duration_ms: 10.651333
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:480:1'
+  failureType: 'subtestsFailed'
+  error: '2 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..7
+# tests 28
+# suites 7
+# pass 0
+# fail 28
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 201.784083

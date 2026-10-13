@@ -1,0 +1,610 @@
+▶ V validation
+  ✖ V1 question empty string (0.736166ms)
+  ✖ V2 question whitespace only (0.101333ms)
+  ✖ V3 reason empty string (0.092417ms)
+  ✖ V4 one option (0.078292ms)
+  ✖ V5 four options (0.081ms)
+  ✖ V6 duplicate option ids (0.073917ms)
+  ✖ V7 option with empty id (0.077958ms)
+  ✖ V8 option with empty label (0.138375ms)
+  ✖ V9 option with empty tradeoff (0.091792ms)
+✖ V validation (2.388292ms)
+▶ I interaction surface
+  ✖ I1 dialog surface includes question, reason, options, tradeoffs, recommendation (0.12425ms)
+  ✖ I2 custom-answer entry is offered and distinct from real option entries (0.05775ms)
+  ✖ I3 without recommendation, surface contains no Recommendation section (0.04225ms)
+✖ I interaction surface (0.312625ms)
+▶ A answered
+  ✖ A1 select returns offered[1] (0.064333ms)
+  ✖ A2 select custom entry then custom input (0.045125ms)
+  ✖ A3 custom answer preserves whitespace exactly (0.040125ms)
+  ✖ A4 option label with surrounding whitespace preserved exactly (0.043542ms)
+  ✖ A5 substring-overlapping labels mapped by exact index, not substring (0.038291ms)
+✖ A answered (0.293959ms)
+▶ C cancellation
+  ✖ C1 select returns undefined (0.044208ms)
+  ✖ C2 select custom entry then input undefined (0.032541ms)
+  ✖ C3 select custom entry then input whitespace only spaces (0.030542ms)
+  ✖ C4 select custom entry then input whitespace mixed (0.041541ms)
+✖ C cancellation (0.197625ms)
+▶ P pending / no default
+  ✖ P1 stays pending while select unresolved, then returns selected answer (0.490792ms)
+  ✖ P2 with recommendation present and select unresolved, no default auto-accept (0.137ms)
+✖ P pending / no default (0.667792ms)
+▶ U unavailable
+  ✖ U1 ui undefined returns unavailable (0.042833ms)
+  ✖ U2 select method missing (0.03475ms)
+  ✖ U3 input method missing (0.036417ms)
+✖ U unavailable (0.178958ms)
+▶ B busy
+  ✖ B1 second call on same runner while pending returns unavailable busy (10.597625ms)
+  ✖ B2 after first call finishes, later call on same runner is not busy (0.916125ms)
+✖ B busy (11.661333ms)
+ℹ tests 28
+ℹ suites 7
+ℹ pass 0
+ℹ fail 28
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 201.761625
+
+✖ failing tests:
+
+test at tests/ask-user.test.ts:152:3
+✖ V1 question empty string (0.736166ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:154:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:154:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Test.start (node:internal/test_runner/test:1262:17)
+        at node:internal/test_runner/test:1903:71,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:157:3
+✖ V2 question whitespace only (0.101333ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:159:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:159:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:166:3
+✖ V3 reason empty string (0.092417ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:168:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:168:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:171:3
+✖ V4 one option (0.078292ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:173:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:173:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:180:3
+✖ V5 four options (0.081ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:182:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:182:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:189:3
+✖ V6 duplicate option ids (0.073917ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:195:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:195:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:198:3
+✖ V7 option with empty id (0.077958ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:204:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:204:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:207:3
+✖ V8 option with empty label (0.138375ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:213:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:213:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:216:3
+✖ V9 option with empty tradeoff (0.091792ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: not implemented
+      at async assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:3)
+      at async TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:222:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:140:13
+        at waitForActual (node:assert:601:21)
+        at strict.rejects (node:assert:738:31)
+        at assertValidationError (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:138:16)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:222:11)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:231:3
+✖ I1 dialog surface includes question, reason, options, tradeoffs, recommendation (0.12425ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:238:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+      at node:internal/per_context/primordials:505:9
+
+test at tests/ask-user.test.ts:260:3
+✖ I2 custom-answer entry is offered and distinct from real option entries (0.05775ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:263:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:281:3
+✖ I3 without recommendation, surface contains no Recommendation section (0.04225ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:285:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:297:3
+✖ A1 select returns offered[1] (0.064333ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:300:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+      at node:internal/per_context/primordials:505:9
+
+test at tests/ask-user.test.ts:310:3
+✖ A2 select custom entry then custom input (0.045125ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:316:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:325:3
+✖ A3 custom answer preserves whitespace exactly (0.040125ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:332:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:341:3
+✖ A4 option label with surrounding whitespace preserved exactly (0.043542ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:347:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:357:3
+✖ A5 substring-overlapping labels mapped by exact index, not substring (0.038291ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:363:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:375:3
+✖ C1 select returns undefined (0.044208ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:378:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+      at node:internal/per_context/primordials:505:9
+
+test at tests/ask-user.test.ts:387:3
+✖ C2 select custom entry then input undefined (0.032541ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:393:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:397:3
+✖ C3 select custom entry then input whitespace only spaces (0.030542ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:403:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:407:3
+✖ C4 select custom entry then input whitespace mixed (0.041541ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:413:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:419:3
+✖ P1 stays pending while select unresolved, then returns selected answer (0.490792ms)
+  AssertionError [ERR_ASSERTION]: runAskUser should still be pending
+  + actual - expected
+  
+  + Error: not implemented
+  +     at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+  +     at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:422:21)
+  +     at Test.runInAsyncScope (node:async_hooks:226:14)
+  +     at Test.run (node:internal/test_runner/test:1402:25)
+  +     at Test.start (node:internal/test_runner/test:1262:17)
+  +     at node:internal/test_runner/test:1903:71
+  +     at node:internal/per_context/primordials:505:82
+  +     at new Promise (<anonymous>)
+  +     at new SafePromise (node:internal/per_context/primordials:479:3)
+  +     at node:internal/per_context/primordials:505:9
+  - 'timer'
+  
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:425:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:422:21)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Test.start (node:internal/test_runner/test:1262:17)
+        at node:internal/test_runner/test:1903:71
+        at node:internal/per_context/primordials:505:82
+        at new Promise (<anonymous>)
+        at new SafePromise (node:internal/per_context/primordials:479:3)
+        at node:internal/per_context/primordials:505:9,
+    expected: 'timer',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:436:3
+✖ P2 with recommendation present and select unresolved, no default auto-accept (0.137ms)
+  AssertionError [ERR_ASSERTION]: should not auto-resolve with recommendation
+  + actual - expected
+  
+  + Error: not implemented
+  +     at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+  +     at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:443:21)
+  +     at Test.runInAsyncScope (node:async_hooks:226:14)
+  +     at Test.run (node:internal/test_runner/test:1402:25)
+  +     at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+  +     at Test.postRun (node:internal/test_runner/test:1542:19)
+  +     at Test.run (node:internal/test_runner/test:1467:12)
+  +     at async Promise.all (index 0)
+  +     at async Suite.run (node:internal/test_runner/test:1905:7)
+  +     at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  - 'timer'
+  
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:446:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:443:21)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19)
+        at Test.run (node:internal/test_runner/test:1467:12)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1905:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:974:7),
+    expected: 'timer',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:459:3
+✖ U1 ui undefined returns unavailable (0.042833ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:461:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+      at node:internal/per_context/primordials:505:9
+
+test at tests/ask-user.test.ts:465:3
+✖ U2 select method missing (0.03475ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:468:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:472:3
+✖ U3 input method missing (0.036417ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:475:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/ask-user.test.ts:481:3
+✖ B1 second call on same runner while pending returns unavailable busy (10.597625ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:484:22)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+      at node:internal/per_context/primordials:505:9
+
+test at tests/ask-user.test.ts:517:3
+✖ B2 after first call finishes, later call on same runner is not busy (0.916125ms)
+  Error: not implemented
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:520:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

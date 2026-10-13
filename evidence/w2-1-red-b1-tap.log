@@ -1,0 +1,42 @@
+TAP version 13
+# Subtest: B busy
+    # Subtest: B1 second call on same runner while pending returns unavailable busy
+    not ok 1 - B1 second call on same runner while pending returns unavailable busy
+      ---
+      duration_ms: 11.615292
+      type: 'test'
+      location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:481:3'
+      failureType: 'testCodeFailure'
+      error: 'not implemented'
+      code: 'ERR_TEST_FAILURE'
+      stack: |-
+        askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:39:11)
+        TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:484:22)
+        Test.runInAsyncScope (node:async_hooks:226:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        node:internal/test_runner/test:1903:71
+        node:internal/per_context/primordials:505:82
+        new Promise (<anonymous>)
+        new SafePromise (node:internal/per_context/primordials:479:3)
+        node:internal/per_context/primordials:505:9
+      ...
+    1..1
+not ok 1 - B busy
+  ---
+  duration_ms: 12.795
+  type: 'suite'
+  location: '/Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:480:1'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 1
+# suites 1
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 160.946042
