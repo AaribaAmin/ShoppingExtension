@@ -1,0 +1,47 @@
+TAP version 13
+# Subtest: A adapter UI construction
+    # Subtest: A1 hasUI=true, select missing
+    ok 1 - A1 hasUI=true, select missing
+      ---
+      duration_ms: 0.710958
+      type: 'test'
+      ...
+    # Subtest: A2 hasUI=true, input missing
+    ok 2 - A2 hasUI=true, input missing
+      ---
+      duration_ms: 0.075583
+      type: 'test'
+      ...
+    # Subtest: A3 hasUI=true, ui undefined
+    ok 3 - A3 hasUI=true, ui undefined
+      ---
+      duration_ms: 0.061292
+      type: 'test'
+      ...
+    # Subtest: A4 hasUI=false, both methods present
+    ok 4 - A4 hasUI=false, both methods present
+      ---
+      duration_ms: 0.063709
+      type: 'test'
+      ...
+    # Subtest: A5 hasUI=true, both methods present
+    ok 5 - A5 hasUI=true, both methods present
+      ---
+      duration_ms: 1.255167
+      type: 'test'
+      ...
+    1..5
+ok 1 - A adapter UI construction
+  ---
+  duration_ms: 2.819167
+  type: 'suite'
+  ...
+1..1
+# tests 5
+# suites 1
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 165.1835

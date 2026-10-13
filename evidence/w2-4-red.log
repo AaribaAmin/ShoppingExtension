@@ -1,0 +1,105 @@
+▶ V validation
+  ✔ V1 question empty string (0.623583ms)
+  ✔ V2 question whitespace only (0.089667ms)
+  ✔ V3 reason empty string (0.339791ms)
+  ✔ V4 one option (0.124417ms)
+  ✔ V5 four options (0.070875ms)
+  ✔ V6 duplicate option ids (0.072ms)
+  ✔ V7 option with empty id (0.068125ms)
+  ✔ V8 option with empty label (0.066917ms)
+  ✔ V9 option with empty tradeoff (0.07875ms)
+✔ V validation (2.253ms)
+▶ I interaction surface
+  ✔ I1 dialog surface includes question, reason, options, tradeoffs, recommendation (0.188709ms)
+  ✔ I2 custom-answer entry is offered and distinct from real option entries (0.068083ms)
+  ✔ I3 without recommendation, surface contains no Recommendation section (0.049459ms)
+✔ I interaction surface (0.39575ms)
+▶ A answered
+  ✔ A1 select returns offered[1] (0.375ms)
+  ✔ A2 select custom entry then custom input (0.07425ms)
+  ✔ A3 custom answer preserves whitespace exactly (0.048792ms)
+  ✔ A4 option label with surrounding whitespace preserved exactly (0.049042ms)
+  ✔ A5 substring-overlapping labels mapped by exact index, not substring (0.0425ms)
+✔ A answered (0.657125ms)
+▶ C cancellation
+  ✔ C1 select returns undefined (0.067916ms)
+  ✔ C2 select custom entry then input undefined (0.208041ms)
+  ✔ C3 select custom entry then input whitespace only spaces (0.11675ms)
+  ✔ C4 select custom entry then input whitespace mixed (0.076666ms)
+✔ C cancellation (0.554917ms)
+▶ P pending / no default
+  ✔ P1 stays pending while select unresolved, then returns selected answer (50.632375ms)
+  ✔ P2 with recommendation present and select unresolved, no default auto-accept (51.352125ms)
+✔ P pending / no default (102.152625ms)
+▶ U unavailable
+  ✔ U1 ui undefined returns unavailable (0.059667ms)
+  ✔ U2 select method missing (0.039208ms)
+  ✔ U3 input method missing (0.028958ms)
+✔ U unavailable (0.183ms)
+▶ B busy
+  ✔ B1 second call on same runner while pending returns unavailable busy (11.654875ms)
+  ✔ B2 after first call finishes, later call on same runner is not busy (0.078875ms)
+✔ B busy (11.776875ms)
+▶ R regressions
+  ✖ R1 identical labels and tradeoffs stay distinguishable by id (0.746625ms)
+  ✖ R2 custom input stays busy; first answer still resolves (10.999334ms)
+✖ R regressions (11.904458ms)
+ℹ tests 30
+ℹ suites 8
+ℹ pass 28
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 291.774708
+
+✖ failing tests:
+
+test at tests/ask-user.test.ts:576:3
+✖ R1 identical labels and tradeoffs stay distinguishable by id (0.746625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      kind: 'option',
+      label: 'Same',
+  +   optionId: 'a',
+  -   optionId: 'b',
+      status: 'answered'
+    }
+  
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:582:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { status: 'answered', kind: 'option', optionId: 'a', label: 'Same' },
+    expected: { status: 'answered', kind: 'option', optionId: 'b', label: 'Same' },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ask-user.test.ts:591:3
+✖ R2 custom input stays busy; first answer still resolves (10.999334ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      consent: false,
+  +   status: 'cancelled'
+  -   reason: 'busy',
+  -   status: 'unavailable'
+    }
+  
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ask-user.test.ts:602:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { status: 'cancelled', consent: false },
+    expected: { status: 'unavailable', reason: 'busy', consent: false },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,50 @@
+▶ V validation
+  ✔ V1 question empty string (0.627417ms)
+  ✔ V2 question whitespace only (0.08325ms)
+  ✔ V3 reason empty string (0.07325ms)
+  ✔ V4 one option (0.058834ms)
+  ✔ V5 four options (0.0675ms)
+  ✔ V6 duplicate option ids (0.058208ms)
+  ✔ V7 option with empty id (0.061292ms)
+  ✔ V8 option with empty label (0.074666ms)
+  ✔ V9 option with empty tradeoff (0.123334ms)
+✔ V validation (1.839ms)
+▶ I interaction surface
+  ✔ I1 dialog surface includes question, reason, options, tradeoffs, recommendation (0.18975ms)
+  ✔ I2 custom-answer entry is offered and distinct from real option entries (0.069875ms)
+  ✔ I3 without recommendation, surface contains no Recommendation section (0.049625ms)
+✔ I interaction surface (0.395958ms)
+▶ A answered
+  ✔ A1 select returns offered[1] (0.390542ms)
+  ✔ A2 select custom entry then custom input (0.076416ms)
+  ✔ A3 custom answer preserves whitespace exactly (0.056ms)
+  ✔ A4 option label with surrounding whitespace preserved exactly (0.048459ms)
+  ✔ A5 substring-overlapping labels mapped by exact index, not substring (0.0505ms)
+✔ A answered (0.69625ms)
+▶ C cancellation
+  ✔ C1 select returns undefined (0.061ms)
+  ✔ C2 select custom entry then input undefined (0.045625ms)
+  ✔ C3 select custom entry then input whitespace only spaces (0.041083ms)
+  ✔ C4 select custom entry then input whitespace mixed (0.061875ms)
+✔ C cancellation (0.259ms)
+▶ P pending / no default
+  ✔ P1 stays pending while select unresolved, then returns selected answer (51.324541ms)
+  ✔ P2 with recommendation present and select unresolved, no default auto-accept (51.083167ms)
+✔ P pending / no default (102.598375ms)
+▶ U unavailable
+  ✔ U1 ui undefined returns unavailable (0.090958ms)
+  ✔ U2 select method missing (0.05375ms)
+  ✔ U3 input method missing (0.040541ms)
+✔ U unavailable (0.262666ms)
+▶ B busy
+  ✔ B1 second call on same runner while pending returns unavailable busy (11.872334ms)
+  ✔ B2 after first call finishes, later call on same runner is not busy (0.116583ms)
+✔ B busy (12.052959ms)
+ℹ tests 28
+ℹ suites 7
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 258.109709

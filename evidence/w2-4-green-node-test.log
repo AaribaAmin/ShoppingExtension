@@ -1,0 +1,54 @@
+▶ V validation
+  ✔ V1 question empty string (0.634167ms)
+  ✔ V2 question whitespace only (0.087834ms)
+  ✔ V3 reason empty string (0.072625ms)
+  ✔ V4 one option (0.064958ms)
+  ✔ V5 four options (0.065917ms)
+  ✔ V6 duplicate option ids (0.071958ms)
+  ✔ V7 option with empty id (0.06125ms)
+  ✔ V8 option with empty label (0.062166ms)
+  ✔ V9 option with empty tradeoff (0.076333ms)
+✔ V validation (1.888792ms)
+▶ I interaction surface
+  ✔ I1 dialog surface includes question, reason, options, tradeoffs, recommendation (0.195542ms)
+  ✔ I2 custom-answer entry is offered and distinct from real option entries (0.084875ms)
+  ✔ I3 without recommendation, surface contains no Recommendation section (0.051542ms)
+✔ I interaction surface (0.420167ms)
+▶ A answered
+  ✔ A1 select returns offered[1] (0.387167ms)
+  ✔ A2 select custom entry then custom input (0.07675ms)
+  ✔ A3 custom answer preserves whitespace exactly (0.068ms)
+  ✔ A4 option label with surrounding whitespace preserved exactly (0.0595ms)
+  ✔ A5 substring-overlapping labels mapped by exact index, not substring (0.04625ms)
+✔ A answered (0.716542ms)
+▶ C cancellation
+  ✔ C1 select returns undefined (0.061125ms)
+  ✔ C2 select custom entry then input undefined (0.043417ms)
+  ✔ C3 select custom entry then input whitespace only spaces (0.0575ms)
+  ✔ C4 select custom entry then input whitespace mixed (0.044625ms)
+✔ C cancellation (0.264375ms)
+▶ P pending / no default
+  ✔ P1 stays pending while select unresolved, then returns selected answer (51.517167ms)
+  ✔ P2 with recommendation present and select unresolved, no default auto-accept (51.473458ms)
+✔ P pending / no default (103.173667ms)
+▶ U unavailable
+  ✔ U1 ui undefined returns unavailable (0.074625ms)
+  ✔ U2 select method missing (0.043084ms)
+  ✔ U3 input method missing (0.032625ms)
+✔ U unavailable (0.215417ms)
+▶ B busy
+  ✔ B1 second call on same runner while pending returns unavailable busy (11.861417ms)
+  ✔ B2 after first call finishes, later call on same runner is not busy (0.158875ms)
+✔ B busy (12.102375ms)
+▶ R regressions
+  ✔ R1 identical labels and tradeoffs stay distinguishable by id (0.085792ms)
+  ✔ R2 custom input stays busy; first answer still resolves (11.697041ms)
+✔ R regressions (11.876833ms)
+ℹ tests 30
+ℹ suites 8
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 277.620417

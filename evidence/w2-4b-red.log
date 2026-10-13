@@ -1,0 +1,112 @@
+▶ V validation
+  ✔ V1 question empty string (0.77025ms)
+  ✔ V2 question whitespace only (0.101459ms)
+  ✔ V3 reason empty string (0.06975ms)
+  ✔ V4 one option (0.065667ms)
+  ✔ V5 four options (0.071791ms)
+  ✔ V6 duplicate option ids (0.067709ms)
+  ✔ V7 option with empty id (0.060417ms)
+  ✔ V8 option with empty label (0.065ms)
+  ✔ V9 option with empty tradeoff (0.087ms)
+✔ V validation (2.0225ms)
+▶ I interaction surface
+  ✔ I1 dialog surface includes question, reason, options, tradeoffs, recommendation (0.447792ms)
+  ✔ I2 custom-answer entry is offered and distinct from real option entries (0.246042ms)
+  ✔ I3 without recommendation, surface contains no Recommendation section (0.167209ms)
+✔ I interaction surface (1.079875ms)
+▶ A answered
+  ✔ A1 select returns offered[1] (0.871958ms)
+  ✔ A2 select custom entry then custom input (0.199792ms)
+  ✔ A3 custom answer preserves whitespace exactly (0.1595ms)
+  ✔ A4 option label with surrounding whitespace preserved exactly (0.129166ms)
+  ✔ A5 substring-overlapping labels mapped by exact index, not substring (0.110709ms)
+✔ A answered (1.811583ms)
+▶ C cancellation
+  ✔ C1 select returns undefined (0.136291ms)
+  ✔ C2 select custom entry then input undefined (0.067583ms)
+  ✔ C3 select custom entry then input whitespace only spaces (0.060625ms)
+  ✔ C4 select custom entry then input whitespace mixed (0.052208ms)
+✔ C cancellation (0.413916ms)
+▶ P pending / no default
+  ✔ P1 stays pending while select unresolved, then returns selected answer (51.176458ms)
+  ✔ P2 with recommendation present and select unresolved, no default auto-accept (49.838292ms)
+✔ P pending / no default (101.21675ms)
+▶ U unavailable
+  ✔ U1 ui undefined returns unavailable (0.084416ms)
+  ✔ U2 select method missing (0.043167ms)
+  ✔ U3 input method missing (0.029ms)
+✔ U unavailable (0.240625ms)
+▶ B busy
+  ✔ B1 second call on same runner while pending returns unavailable busy (11.91775ms)
+  ✔ B2 after first call finishes, later call on same runner is not busy (0.141917ms)
+✔ B busy (12.138708ms)
+▶ R regressions
+  ✔ R1 identical labels and tradeoffs stay distinguishable by id (0.07075ms)
+  ✔ R2 custom input stays busy; first answer still resolves (11.643375ms)
+✔ R regressions (11.831958ms)
+▶ A adapter UI construction
+  ✖ A1 hasUI=true, select missing (0.456625ms)
+  ✖ A2 hasUI=true, input missing (0.920833ms)
+  ✖ A3 hasUI=true, ui undefined (0.083375ms)
+  ✔ A4 hasUI=false, both methods present (0.080583ms)
+  ✔ A5 hasUI=true, both methods present (0.081917ms)
+✖ A adapter UI construction (2.166333ms)
+ℹ tests 35
+ℹ suites 9
+ℹ pass 32
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 289.930292
+
+✖ failing tests:
+
+test at tests/ui-adapter.test.ts:16:3
+✖ A1 hasUI=true, select missing (0.456625ms)
+  TypeError [Error]: ui.select is not a function
+      at Object.select (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ui-adapter.ts:11:33)
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:105:34)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ui-adapter.test.ts:23:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+
+test at tests/ui-adapter.test.ts:27:3
+✖ A2 hasUI=true, input missing (0.920833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      consent: false,
+  +   status: 'cancelled'
+  -   status: 'unavailable'
+    }
+  
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ui-adapter.test.ts:35:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { status: 'cancelled', consent: false },
+    expected: { status: 'unavailable', consent: false },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-adapter.test.ts:38:3
+✖ A3 hasUI=true, ui undefined (0.083375ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'select')
+      at Object.select (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ui-adapter.ts:11:33)
+      at askUserRunner (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/src/ask-user.ts:105:34)
+      at TestContext.<anonymous> (file:///Users/aaribaamin/Industry_AI/ShoppingExtension/tests/ui-adapter.test.ts:42:26)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)
